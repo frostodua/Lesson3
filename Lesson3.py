@@ -31,6 +31,20 @@ try:
 except ValueError as error:
     print("Введіть цифри, будь ласка!")
 
+try:
+    num1 = int(input("Введіть перше число\n"))
+    num2 = int(input("Введіть друге число\n"))
+    if num1 == num2:
+        print()
+    else:
+        if num1 < num2:
+            print(num1,num2)
+        else:
+            print(num2,num1)
+except ValueError as error:
+    print("Введіть цифри, будь ласка!")
+
+
 
 
 
