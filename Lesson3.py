@@ -10,6 +10,7 @@
 # 3. Користувач вводить два числа та матем дію: + - * або /
 # Залежно від введеної матем дії вивести результат
 
+#1
 try:
     numday = int(input("Введіть номер дня тижня від 1 до 7\n"))
     if numday == 1:
@@ -30,7 +31,12 @@ try:
         print("Помилка, введіть цифри від 1 до 7")
 except ValueError as error:
     print("Введіть цифри, будь ласка!")
+except Exception as error:
+    print(f"Exception occurred: {error}")
+finally:
+    print("Гарного дня!")
 
+#2
 try:
     num1 = int(input("Введіть перше число\n"))
     num2 = int(input("Введіть друге число\n"))
@@ -43,6 +49,41 @@ try:
             print(num2,num1)
 except ValueError as error:
     print("Введіть цифри, будь ласка!")
+except Exception as error:
+    print(f"Exception occurred: {error}")
+finally:
+    print("Гарного дня!")
+
+#3
+try:
+    A = int(input("Введіть перше число "))
+    B = int(input("Введіть друге число "))
+    C = str(input("Введіть математичну дію +-*/ "))
+    if C == "+":
+        result = A+B
+        print(f"Сума дорівнює {result}")
+    elif C == "-":
+        result = A-B
+        print(f"Маємо у підсумку {result}")
+    elif C == "*":
+        result = A*B
+        print(f"Множення дорівнює {result}")
+    elif C == "/":
+        result = A/B
+        print(f"Поділ дорівнює {result}")
+    else:
+        print("Введіть математичні дії, будь ласка!")
+
+except ZeroDivisionError as error:
+    print(f"Ділення на нуль: {error}")
+except ValueError as error:
+    print("Вводіть цифри, будь ласка!")
+    print(f"ValueError: {error}")
+except Exception as error:
+    print(f"Exception occurred: {error}")
+finally:
+    print("Гарного дня!")
+
 
 
 
