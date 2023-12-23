@@ -10,6 +10,28 @@
 # 3. Користувач вводить два числа та матем дію: + - * або /
 # Залежно від введеної матем дії вивести результат
 
-numday=int(input("Введіть номер дня тижня від 1 до 7"))
-if numday == 1
-    print("Понеділок")
+try:
+    numday = int(input("Введіть номер дня тижня від 1 до 7\n"))
+    if numday == 1:
+        print("Понеділок")
+    elif numday == 2:
+        print("Вівторок")
+    elif numday == 3:
+        print("Середа")
+    elif numday == 4:
+        print("Четвер")
+    elif numday == 5:
+        print("П'ятниця")
+    elif numday == 6:
+        print("Субота")
+    elif numday == 7:
+        print("Неділя")
+    else:
+        print("Помилка, введіть цифри від 1 до 7")
+except ValueError as error:
+    print("Введіть цифри, будь ласка!")
+
+
+
+
+
